@@ -19,32 +19,6 @@ export default {
       maxzoom: 24
     },
     {
-      id: "coastline",
-      type: "line",
-      paint: {
-        "line-blur": 0.5,
-        "line-color": "#198EC8",
-        "line-width": {
-          stops: [
-            [0, 2],
-            [6, 6],
-            [14, 9],
-            [22, 18]
-          ]
-        }
-      },
-      filter: ["all"],
-      layout: {
-        "line-cap": "round",
-        "line-join": "round",
-        visibility: "visible"
-      },
-      source: "maplibre",
-      maxzoom: 24,
-      minzoom: 0,
-      "source-layer": "countries"
-    },
-    {
       id: "countries-fill",
       type: "fill",
       paint: {
@@ -296,78 +270,6 @@ export default {
       source: "maplibre",
       maxzoom: 24,
       "source-layer": "countries"
-    },
-    // {
-    //   id: "countries-boundary",
-    //   type: "line",
-    //   paint: {
-    //     "line-color": "rgba(255, 255, 255, 0)",
-    //     "line-width": {
-    //       stops: [
-    //         [1, 1],
-    //         [6, 2],
-    //         [14, 6],
-    //         [22, 12]
-    //       ]
-    //     },
-    //     "line-opacity": {
-    //       stops: [
-    //         [3, 0.5],
-    //         [6, 1]
-    //       ]
-    //     }
-    //   },
-    //   layout: {
-    //     "line-cap": "round",
-    //     "line-join": "round",
-    //     visibility: "visible"
-    //   },
-    //   source: "maplibre",
-    //   maxzoom: 24,
-    //   "source-layer": "countries"
-    // },
-    {
-      id: "geolines",
-      type: "line",
-      paint: {
-        "line-color": "#1077B0",
-        "line-opacity": 1,
-        "line-dasharray": [3, 3]
-      },
-      filter: ["all", ["!=", "name", "International Date Line"]],
-      layout: {
-        visibility: "visible"
-      },
-      source: "maplibre",
-      maxzoom: 24,
-      "source-layer": "geolines"
-    },
-    {
-      id: "geolines-label",
-      type: "symbol",
-      paint: {
-        "text-color": "#1077B0",
-        "text-halo-blur": 1,
-        "text-halo-color": "rgba(255, 255, 255, 1)",
-        "text-halo-width": 1
-      },
-      filter: ["all", ["!=", "name", "International Date Line"]],
-      layout: {
-        "text-font": ["Open Sans Semibold"],
-        "text-size": {
-          stops: [
-            [2, 12],
-            [6, 16]
-          ]
-        },
-        "text-field": "{name}",
-        visibility: "visible",
-        "symbol-placement": "line"
-      },
-      source: "maplibre",
-      maxzoom: 24,
-      minzoom: 1,
-      "source-layer": "geolines"
     },
     {
       id: "countries-label",
