@@ -10,6 +10,12 @@ let map = new maplibregl.Map({
   zoom: 0 // starting zoom
 })
 
+// override the youtube video as needed
+const urlParams = new URLSearchParams(window.location.search)
+if (urlParams.get('video')) {
+  document.getElementById('video').src = `//www.youtube.com/embed/${urlParams.get('video')}?rel=0`
+}
+
 let discoColors = [
   // colors and their associated png favicon. it's dumb that parceljs can't handle static assets better and makes me import them...
   // well in 30 minutes of struggling nothing worked and i got impatient, so maybe if you dig deeper they're a way.
