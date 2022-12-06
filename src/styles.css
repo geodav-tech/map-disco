@@ -1,9 +1,16 @@
 body {
   font-family: sans-serif;
 }
+
 #map {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
+}
+
+#video {
+  position: absolute;
+  z-index: 9;
+  bottom: 0;
 }
