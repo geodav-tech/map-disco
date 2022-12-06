@@ -43,16 +43,20 @@ function getFunky() {
   let fillColors = shuffle([3, 5, 7, 9, 11, 13, 15, 17, 18])
 
   fillColors.forEach((fillColorIndex, arrayIndex) => {
-    mapStyle.layers[2].paint['fill-color'][fillColorIndex] = discoColors[arrayIndex]
+    mapStyle.layers[1].paint['fill-color'][fillColorIndex] = discoColors[arrayIndex]
   })
 
   map.setStyle(mapStyle)
 }
 
-map.once('click', () => {
+document.getElementById('party-button').onclick = () => {
+  // hide the button
+  document.getElementById('party-button').classList.toggle('zind-99')
+
   // start the music
   document.getElementById('video').src += "&autoplay=1"
+  document.getElementById('video').classList.add('zind-99') // bring to front
   
   // get funky at 104 bpm to match with the beegees (decimals probably get ignored?)
   setInterval(getFunky, 576.923077)
-})
+}
