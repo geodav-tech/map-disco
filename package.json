@@ -1,23 +1,23 @@
 {
-  "name": "map-disco",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
-  },
-  "dependencies": {
-    "maplibre-gl": "2.1.9",
-    "parcel-bundler": "^1.6.1",
-    "src": "^1.1.2"
-  },
-  "devDependencies": {
-    "@babel/core": "7.2.0",
-    "typescript": "4.4.4"
-  },
-  "resolutions": {
-    "@babel/preset-env": "7.13.8"
-  },
-  "keywords": []
+	"name": "map-disco",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.html",
+	"scripts": {
+		"start": "parcel index.html --open",
+		"build": "parcel build --public-url https://geodav.tech/demos/map-disco/ index.html"
+	},
+	"dependencies": {
+		"maplibre-gl": "2.1.9",
+		"parcel-bundler": "^1.6.1",
+		"src": "^1.1.2"
+	},
+	"devDependencies": {
+		"@babel/core": "7.2.0",
+		"typescript": "4.4.4"
+	},
+	"resolutions": {
+		"@babel/preset-env": "7.13.8"
+	},
+	"keywords": []
 }
