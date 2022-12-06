@@ -41,6 +41,12 @@ body {
   border-radius: 30px;
 }
 
+#disco-ball {
+  position: absolute;
+  width: 170px;
+  right: 40%;
+}
+
 #info {
   position: absolute;
   bottom: 0;
@@ -64,7 +70,6 @@ body {
   width: 240px;
   background-color: black;
   color: #fff;
-  text-align: center;
   padding: 15px;
   border-radius: 6px;
   position: absolute;

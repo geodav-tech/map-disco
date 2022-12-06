@@ -63,6 +63,9 @@ document.getElementById('party-button').onclick = () => {
   // start the music
   document.getElementById('video').src += "&autoplay=1"
   document.getElementById('video').classList.add('zind-99') // bring to front
+
+  // show the disco ball
+  document.getElementById('disco-ball').classList.add('zind-99') // bring to front
   
   // get funky at 104 bpm to match with the beegees (decimals probably get ignored?)
   setInterval(getFunky, 576.923077)
